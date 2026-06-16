@@ -58,7 +58,7 @@
     "install:g6": "node scripts/setup-g6.mjs && node scripts/run-install-g6.mjs",
     "dev:g6": "node scripts/dev-g6.mjs",
     "test:g6": "node scripts/test-g6-bridge.mjs",
-    "test:board": "node scripts/test-native-board.mjs",
+    "test:extensions": "node scripts/test-extensions.mjs",
     "debug:court-sync": "node scripts/debug-court-sync.mjs",
     "retest:sync": "tsx scripts/retest-one-sync.ts"
   },

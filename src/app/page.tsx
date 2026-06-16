@@ -7,6 +7,7 @@ import { PriorityCard } from "@/components/dashboard/PriorityCard";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { RevenueChart } from "@/components/dashboard/RevenueChart";
 import { WorkspaceQuickLinks } from "@/components/dashboard/WorkspaceQuickLinks";
+import { ExtensionHub } from "@/components/dashboard/ExtensionHub";
 import { fetchCurrentUserName, fetchDashboardData } from "@/lib/dashboardData";
 import type { CaseItem, ApprovalDoc } from "@/lib/types";
 import { formatDate, getDDay } from "@/lib/utils";
@@ -290,6 +291,11 @@ export default function DashboardPage() {
         {/* AI 콘텐츠 워크스페이스 바로가기 */}
         <motion.div variants={itemVariants}>
           <WorkspaceQuickLinks />
+        </motion.div>
+
+        {/* GitHub 리포 기반 확장 스튜디오 */}
+        <motion.div variants={itemVariants}>
+          <ExtensionHub />
         </motion.div>
 
         {/* Priority deadline cards */}

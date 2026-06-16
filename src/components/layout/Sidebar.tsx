@@ -28,9 +28,17 @@ import {
   Send,
   UserCircle,
   MessageCircle,
+  Sparkles,
+  Puzzle,
+  Minimize2,
+  RefreshCw,
+  Images,
+  Mic,
+  Megaphone,
 } from "lucide-react";
 import { getMenuForRoles } from "@/lib/menuConfig";
 import { useMenus } from "@/hooks/useMenus";
+import { useExtensions } from "@/hooks/useExtensions";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number }>> = {
   LayoutDashboard,
@@ -54,6 +62,13 @@ const iconMap: Record<string, React.ComponentType<{ size?: number }>> = {
   Send,
   UserCircle,
   MessageCircle,
+  Sparkles,
+  Puzzle,
+  Minimize2,
+  RefreshCw,
+  Images,
+  Mic,
+  Megaphone,
 };
 
 const FALLBACK_USER = { name: "사용자", role: "직원", permissions: ["직원"] };
@@ -62,6 +77,7 @@ export function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
   const pathname = usePathname();
   const { lnb } = useMenus();
+  const { active: extensionMenus } = useExtensions();
   const [currentUser, setCurrentUser] = useState<{ name: string; role: string; permissions: string[] }>(FALLBACK_USER);
 
   useEffect(() => {
@@ -162,6 +178,37 @@ export function Sidebar() {
                   {isActive && (
                     <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-primary-400 rounded-r-full" />
                   )}
+                </Link>
+              </li>
+            );
+          })}
+          {extensionMenus.length > 0 && !collapsed && (
+            <li className="pt-3 px-2">
+              <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">
+                확장
+              </span>
+            </li>
+          )}
+          {extensionMenus.map((ext) => {
+            const isActive = pathname.startsWith(ext.href);
+            const IconComponent = iconMap[ext.icon] ?? Puzzle;
+            return (
+              <li key={ext.id}>
+                <Link
+                  href={ext.href}
+                  className={cn(
+                    "flex items-center gap-3 rounded-lg px-2 py-2.5 text-sm font-medium",
+                    "transition-all duration-150 relative group",
+                    "hover:bg-slate-700/60",
+                    collapsed && "justify-center",
+                    isActive
+                      ? "bg-emerald-600/20 text-emerald-400 border border-emerald-600/30"
+                      : "text-slate-400 hover:text-white"
+                  )}
+                  title={collapsed ? ext.name : undefined}
+                >
+                  <IconComponent size={18} />
+                  {!collapsed && <span className="truncate">{ext.name}</span>}
                 </Link>
               </li>
             );
