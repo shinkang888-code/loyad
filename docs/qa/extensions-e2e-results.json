@@ -1,8 +1,8 @@
 {
   "base": "https://loyad.vercel.app",
-  "at": "2026-06-16T09:32:11.044Z",
-  "pass": 23,
-  "skip": 4,
+  "at": "2026-06-16T09:42:26.448Z",
+  "pass": 25,
+  "skip": 2,
   "fail": 0,
   "results": [
     {
@@ -122,8 +122,8 @@
     {
       "feature": "voice_studio",
       "name": "대본 생성",
-      "status": "SKIP",
-      "detail": "Gemini 미설정"
+      "status": "PASS",
+      "detail": "len=1406"
     },
     {
       "feature": "marketing_harness",
@@ -140,8 +140,8 @@
     {
       "feature": "marketing_harness",
       "name": "harness blog",
-      "status": "SKIP",
-      "detail": "Gemini 미설정"
+      "status": "PASS",
+      "detail": "pack 생성"
     },
     {
       "feature": "ai_image_gen",
