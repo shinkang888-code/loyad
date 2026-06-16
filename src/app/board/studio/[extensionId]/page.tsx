@@ -9,6 +9,10 @@ import { AiImageGenStudio } from "@/components/extensions/studio/AiImageGenStudi
 import { ImageProcessStudio } from "@/components/extensions/studio/ImageProcessStudio";
 import { ImageViewerStudio } from "@/components/extensions/studio/ImageViewerStudio";
 import { ExtensionPlaceholderStudio } from "@/components/extensions/studio/ExtensionPlaceholderStudio";
+import { LawMcpStudio } from "@/components/extensions/studio/LawMcpStudio";
+import { DartReportsStudio } from "@/components/extensions/studio/DartReportsStudio";
+import { VoiceStudio } from "@/components/extensions/studio/VoiceStudio";
+import { MarketingHarnessStudio } from "@/components/extensions/studio/MarketingHarnessStudio";
 
 function StudioBody({ extensionId }: { extensionId: string }) {
   switch (extensionId) {
@@ -20,6 +24,14 @@ function StudioBody({ extensionId }: { extensionId: string }) {
       return <ImageProcessStudio mode="convert" />;
     case "image_viewer":
       return <ImageViewerStudio />;
+    case "law_mcp":
+      return <LawMcpStudio />;
+    case "dart_reports":
+      return <DartReportsStudio />;
+    case "voice_studio":
+      return <VoiceStudio />;
+    case "marketing_harness":
+      return <MarketingHarnessStudio />;
     default: {
       const ext = getExtensionById(extensionId);
       if (ext) return <ExtensionPlaceholderStudio ext={ext} />;

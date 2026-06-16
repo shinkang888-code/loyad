@@ -34,10 +34,10 @@
 
 | 리포 | 확장 ID | Phase |
 |------|---------|-------|
-| ah-my-marketing | `marketing_harness` | 6-5 (플레이스홀더) |
-| voice | `voice_studio` | 7 |
-| korean-law-mcp | `law_mcp` | 7 |
-| dartlab | `dart_reports` | 7 |
+| ah-my-marketing | `marketing_harness` | 7-B ✅ |
+| voice | `voice_studio` | 7-A ✅ |
+| korean-law-mcp | `law_mcp` | 7-C ✅ |
+| dartlab | `dart_reports` | 7-D ✅ |
 | naverb, ebook | WYSIWYG·EPUB | 7 |
 | OpenCut, openscreen | 미디어 데모 | 8 |
 
@@ -116,14 +116,21 @@
 
 ---
 
-## 4. Phase 7~8 로드맵 (미구현)
+## 4. Phase 7 구현 (완료)
+
+| Phase | 기능 | API | Studio |
+|-------|------|-----|--------|
+| 7-A | voice TTS·오디오북 | `POST /api/extensions/voice-tts` | `VoiceStudio.tsx` |
+| 7-B | marketing harness | `POST /api/extensions/marketing-harness` | `MarketingHarnessStudio.tsx` |
+| 7-C | korean-law-mcp (5 tools) | `POST /api/extensions/law-mcp` | `LawMcpStudio.tsx` |
+| 7-D | DART 공시·재무 | `POST /api/extensions/dart-reports` | `DartReportsStudio.tsx` |
+
+**env:** `OPENDART_API_KEY` (DART), `LAW_GO_KR_OC` (법령 API), `GOOGLE_GEMINI_API_KEY` (voice·marketing)
+
+### Phase 8 로드맵 (미구현)
 
 | Phase | 기능 | 근거 리포 |
 |-------|------|-----------|
-| 7-A | voice TTS·오디오북 | voice |
-| 7-B | marketing harness (Gemini 워크플로) | ah-my-marketing |
-| 7-C | korean-law-mcp 64 tools UI | korean-law-mcp |
-| 7-D | DART 공시 리포트 | dartlab |
 | 7-E | 셀프호스트 imaginAIry webhook | DaoCloud, imaginAIry |
 | 8 | OpenCut·openscreen 미디어 | OpenCut |
 

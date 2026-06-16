@@ -90,6 +90,8 @@ const CONTENT_REPOS: ExtensionDefinition[] = [
     icon: "Mic",
     href: "/board/studio/voice_studio",
     sourceRepo: { owner: "shinkang888-code", name: "voice", summary: "AI 보이스·오디오북 에디터" },
+    defaultInstalled: true,
+    requiresGemini: true,
     tags: ["voice", "TTS"],
   },
   {
@@ -101,6 +103,7 @@ const CONTENT_REPOS: ExtensionDefinition[] = [
     icon: "Megaphone",
     href: "/board/studio/marketing_harness",
     sourceRepo: { owner: "shinkang888-code", name: "ah-my-marketing", summary: "AI-Native 마케팅 워크플로" },
+    defaultInstalled: true,
     requiresGemini: true,
     tags: ["marketing"],
   },
@@ -113,6 +116,7 @@ const CONTENT_REPOS: ExtensionDefinition[] = [
     icon: "Scale",
     href: "/board/studio/law_mcp",
     sourceRepo: { owner: "shinkang888-code", name: "korean-law-mcp", summary: "한국법 MCP 64 tools" },
+    defaultInstalled: true,
     tags: ["MCP", "법률"],
   },
   {
@@ -124,6 +128,7 @@ const CONTENT_REPOS: ExtensionDefinition[] = [
     icon: "BarChart3",
     href: "/board/studio/dart_reports",
     sourceRepo: { owner: "shinkang888-code", name: "dartlab", summary: "DART 공시 분석" },
+    defaultInstalled: true,
     tags: ["DART", "재무"],
   },
 ];
