@@ -1,0 +1,171 @@
+{
+  "base": "https://loyad.vercel.app",
+  "at": "2026-06-16T09:22:44.623Z",
+  "pass": 22,
+  "skip": 4,
+  "fail": 1,
+  "results": [
+    {
+      "feature": "auth",
+      "name": "demo login",
+      "status": "PASS",
+      "detail": "세션 확보"
+    },
+    {
+      "feature": "catalog",
+      "name": "GET /api/extensions",
+      "status": "PASS",
+      "detail": "catalog 8개"
+    },
+    {
+      "feature": "catalog",
+      "name": "studio /law_mcp",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "feature": "catalog",
+      "name": "studio /dart_reports",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "feature": "catalog",
+      "name": "studio /voice_studio",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "feature": "catalog",
+      "name": "studio /marketing_harness",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "feature": "catalog",
+      "name": "studio /ai_image_gen",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "feature": "law_mcp",
+      "name": "POST 비인증 401",
+      "status": "PASS",
+      "detail": "로그인 필요"
+    },
+    {
+      "feature": "law_mcp",
+      "name": "GET tools",
+      "status": "PASS",
+      "detail": "5 tools"
+    },
+    {
+      "feature": "law_mcp",
+      "name": "search_law",
+      "status": "PASS",
+      "detail": "items 0"
+    },
+    {
+      "feature": "law_mcp",
+      "name": "get_law_article",
+      "status": "PASS",
+      "detail": "source=fallback"
+    },
+    {
+      "feature": "law_mcp",
+      "name": "search_precedents",
+      "status": "PASS",
+      "detail": "count=0"
+    },
+    {
+      "feature": "law_mcp",
+      "name": "external_links",
+      "status": "PASS",
+      "detail": "URL 생성"
+    },
+    {
+      "feature": "dart_reports",
+      "name": "GET corp index",
+      "status": "PASS",
+      "detail": "configured=false, corps=10"
+    },
+    {
+      "feature": "dart_reports",
+      "name": "corp_search",
+      "status": "PASS",
+      "detail": "hits=1"
+    },
+    {
+      "feature": "dart_reports",
+      "name": "disclosures",
+      "status": "SKIP",
+      "detail": "OPENDART_API_KEY 미설정"
+    },
+    {
+      "feature": "dart_reports",
+      "name": "financial",
+      "status": "SKIP",
+      "detail": "OPENDART_API_KEY 미설정"
+    },
+    {
+      "feature": "voice_studio",
+      "name": "POST 비인증 401",
+      "status": "PASS",
+      "detail": "로그인 필요"
+    },
+    {
+      "feature": "voice_studio",
+      "name": "빈 텍스트 400",
+      "status": "PASS",
+      "detail": "검증 OK"
+    },
+    {
+      "feature": "voice_studio",
+      "name": "대본 생성",
+      "status": "SKIP",
+      "detail": "Gemini 미설정"
+    },
+    {
+      "feature": "marketing_harness",
+      "name": "POST 비인증 401",
+      "status": "PASS",
+      "detail": "로그인 필요"
+    },
+    {
+      "feature": "marketing_harness",
+      "name": "빈 주제 400",
+      "status": "PASS",
+      "detail": "검증 OK"
+    },
+    {
+      "feature": "marketing_harness",
+      "name": "harness blog",
+      "status": "SKIP",
+      "detail": "Gemini 미설정"
+    },
+    {
+      "feature": "ai_image_gen",
+      "name": "POST 비인증 401",
+      "status": "PASS",
+      "detail": "로그인 필요"
+    },
+    {
+      "feature": "ai_image_gen",
+      "name": "빈 prompt",
+      "status": "PASS",
+      "detail": "HTTP 400"
+    },
+    {
+      "feature": "image_process",
+      "name": "POST 비인증 401",
+      "status": "PASS",
+      "detail": "로그인 필요"
+    },
+    {
+      "feature": "image_process",
+      "name": "optimize PNG",
+      "status": "FAIL",
+      "detail": "Failed to load external module sharp-20c6a5da84e2135f: Error: Could not load the \"sharp\" module using the linux-x64 runtime\nERR_DLOPEN_FAILED: libvips-cpp.so.8.18.3: cannot open shared object file: No such file or directory\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install"
+    }
+  ]
+}

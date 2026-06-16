@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ["sharp"],
   outputFileTracingIncludes: {
     "/api/document/ocr": ["./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"],
+    "/api/extensions/image-process": [
+      "./node_modules/sharp/**/*",
+      "./node_modules/@img/**/*",
+    ],
     "/api/**": ["./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"],
   },
   experimental: {

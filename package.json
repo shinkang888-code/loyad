@@ -59,6 +59,7 @@
     "dev:g6": "node scripts/dev-g6.mjs",
     "test:g6": "node scripts/test-g6-bridge.mjs",
     "test:extensions": "node scripts/test-extensions.mjs",
+    "test:extensions:e2e": "node scripts/test-extensions-e2e.mjs",
     "debug:court-sync": "node scripts/debug-court-sync.mjs",
     "retest:sync": "tsx scripts/retest-one-sync.ts"
   },
@@ -110,5 +111,8 @@
     "sharp": "^0.35.0",
     "tailwindcss": "^4",
     "typescript": "5.9.3"
+  },
+  "optionalDependencies": {
+    "@img/sharp-linux-x64": "^0.35.0"
   }
 }
