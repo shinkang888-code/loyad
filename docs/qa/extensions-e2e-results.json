@@ -1,8 +1,8 @@
 {
   "base": "https://loyad.vercel.app",
-  "at": "2026-06-16T09:42:26.448Z",
-  "pass": 25,
-  "skip": 2,
+  "at": "2026-06-16T10:11:37.666Z",
+  "pass": 27,
+  "skip": 0,
   "fail": 0,
   "results": [
     {
@@ -87,7 +87,7 @@
       "feature": "dart_reports",
       "name": "GET corp index",
       "status": "PASS",
-      "detail": "configured=false, corps=10"
+      "detail": "configured=true, corps=10"
     },
     {
       "feature": "dart_reports",
@@ -98,14 +98,14 @@
     {
       "feature": "dart_reports",
       "name": "disclosures",
-      "status": "SKIP",
-      "detail": "OPENDART_API_KEY 미설정"
+      "status": "PASS",
+      "detail": "items=20"
     },
     {
       "feature": "dart_reports",
       "name": "financial",
-      "status": "SKIP",
-      "detail": "OPENDART_API_KEY 미설정"
+      "status": "PASS",
+      "detail": "highlights=12"
     },
     {
       "feature": "voice_studio",
@@ -123,7 +123,7 @@
       "feature": "voice_studio",
       "name": "대본 생성",
       "status": "PASS",
-      "detail": "len=1406"
+      "detail": "len=1161"
     },
     {
       "feature": "marketing_harness",

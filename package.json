@@ -61,6 +61,7 @@
     "test:extensions": "node scripts/test-extensions.mjs",
     "test:extensions:e2e": "node scripts/test-extensions-e2e.mjs",
     "sync:gemini-env": "node scripts/sync-gemini-vercel-env.mjs",
+    "sync:opendart-env": "node scripts/sync-opendart-vercel-env.mjs",
     "debug:court-sync": "node scripts/debug-court-sync.mjs",
     "retest:sync": "tsx scripts/retest-one-sync.ts"
   },

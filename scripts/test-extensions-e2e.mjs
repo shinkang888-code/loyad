@@ -250,6 +250,8 @@ async function testMarketingHarness() {
     record(feature, "harness blog", hasBody ? "PASS" : "FAIL", hasBody ? "pack 생성" : "본문 없음");
   } else if (gen.data.error?.includes("Gemini") || gen.data.error?.includes("API 키")) {
     record(feature, "harness blog", "SKIP", "Gemini 미설정");
+  } else if (/high demand|try again|429|503|rate/i.test(String(gen.data.error ?? ""))) {
+    record(feature, "harness blog", "SKIP", "Gemini 일시 과부하");
   } else {
     record(feature, "harness blog", "FAIL", gen.data.error ?? `HTTP ${gen.res.status}`);
   }
